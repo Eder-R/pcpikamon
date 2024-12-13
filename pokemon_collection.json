@@ -1,0 +1,145 @@
+{
+    "1": {
+        "id": 1,
+        "name": "Bulbasaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "quantidade": 6
+    },
+    "3": {
+        "id": 3,
+        "name": "Venusaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "quantidade": 1
+    },
+    "4": {
+        "id": 4,
+        "name": "Charmander",
+        "types": [
+            "fire"
+        ],
+        "quantidade": 4
+    },
+    "5": {
+        "id": 5,
+        "name": "Charmeleon",
+        "types": [
+            "fire"
+        ],
+        "quantidade": 2
+    },
+    "7": {
+        "id": 7,
+        "name": "Squirtle",
+        "types": [
+            "water"
+        ],
+        "quantidade": 3
+    },
+    "10": {
+        "id": 10,
+        "name": "Caterpie",
+        "types": [
+            "bug"
+        ],
+        "quantidade": 9
+    },
+    "11": {
+        "id": 11,
+        "name": "Metapod",
+        "types": [
+            "bug"
+        ],
+        "quantidade": 1
+    },
+    "13": {
+        "id": 13,
+        "name": "Weedle",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "quantidade": 9
+    },
+    "14": {
+        "id": 14,
+        "name": "Kakuna",
+        "types": [
+            "bug",
+            "poison"
+        ],
+        "quantidade": 2
+    },
+    "16": {
+        "id": 16,
+        "name": "Pidgey",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "quantidade": 6
+    },
+    "17": {
+        "id": 17,
+        "name": "Pidgeotto",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "quantidade": 1
+    },
+    "19": {
+        "id": 19,
+        "name": "Rattata",
+        "types": [
+            "normal"
+        ],
+        "quantidade": 5
+    },
+    "20": {
+        "id": 20,
+        "name": "Raticate",
+        "types": [
+            "normal"
+        ],
+        "quantidade": 1
+    },
+    "21": {
+        "id": 21,
+        "name": "Spearow",
+        "types": [
+            "normal",
+            "flying"
+        ],
+        "quantidade": 0
+    },
+    "23": {
+        "id": 23,
+        "name": "Ekans",
+        "types": [
+            "poison"
+        ],
+        "quantidade": 0
+    },
+    "25": {
+        "id": 25,
+        "name": "Pikachu",
+        "types": [
+            "electric"
+        ],
+        "quantidade": 0
+    },
+    "26": {
+        "id": 26,
+        "name": "Raichu",
+        "types": [
+            "electric"
+        ],
+        "quantidade": 0
+    }
+}
