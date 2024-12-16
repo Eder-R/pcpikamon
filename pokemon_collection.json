@@ -6,7 +6,18 @@
             "grass",
             "poison"
         ],
-        "quantidade": 6
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "quantidade": 0
+    },
+    "2": {
+        "id": 2,
+        "name": "Ivysaur",
+        "types": [
+            "grass",
+            "poison"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "quantidade": 0
     },
     "3": {
         "id": 3,
@@ -15,7 +26,8 @@
             "grass",
             "poison"
         ],
-        "quantidade": 1
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+        "quantidade": 0
     },
     "4": {
         "id": 4,
@@ -23,7 +35,8 @@
         "types": [
             "fire"
         ],
-        "quantidade": 4
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+        "quantidade": 0
     },
     "5": {
         "id": 5,
@@ -31,7 +44,18 @@
         "types": [
             "fire"
         ],
-        "quantidade": 2
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+        "quantidade": 0
+    },
+    "6": {
+        "id": 6,
+        "name": "Charizard",
+        "types": [
+            "fire",
+            "flying"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+        "quantidade": 0
     },
     "7": {
         "id": 7,
@@ -39,107 +63,824 @@
         "types": [
             "water"
         ],
-        "quantidade": 3
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+        "quantidade": 0
     },
-    "10": {
-        "id": 10,
-        "name": "Caterpie",
+    "8": {
+        "id": 8,
+        "name": "Wartortle",
         "types": [
-            "bug"
+            "water"
         ],
-        "quantidade": 9
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+        "quantidade": 0
     },
-    "11": {
-        "id": 11,
-        "name": "Metapod",
+    "9": {
+        "id": 9,
+        "name": "Blastoise",
         "types": [
-            "bug"
+            "water"
         ],
-        "quantidade": 1
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+        "quantidade": 0
     },
-    "13": {
-        "id": 13,
-        "name": "Weedle",
+    "152": {
+        "id": 152,
+        "name": "Chikorita",
         "types": [
-            "bug",
-            "poison"
+            "grass"
         ],
-        "quantidade": 9
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
+        "quantidade": 0
     },
-    "14": {
-        "id": 14,
-        "name": "Kakuna",
+    "153": {
+        "id": 153,
+        "name": "Bayleef",
         "types": [
-            "bug",
-            "poison"
+            "grass"
         ],
-        "quantidade": 2
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
+        "quantidade": 0
     },
-    "16": {
-        "id": 16,
-        "name": "Pidgey",
+    "154": {
+        "id": 154,
+        "name": "Meganium",
         "types": [
-            "normal",
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
+        "quantidade": 0
+    },
+    "155": {
+        "id": 155,
+        "name": "Cyndaquil",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
+        "quantidade": 0
+    },
+    "156": {
+        "id": 156,
+        "name": "Quilava",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
+        "quantidade": 0
+    },
+    "157": {
+        "id": 157,
+        "name": "Typhlosion",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
+        "quantidade": 0
+    },
+    "158": {
+        "id": 158,
+        "name": "Totodile",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
+        "quantidade": 0
+    },
+    "159": {
+        "id": 159,
+        "name": "Croconaw",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
+        "quantidade": 0
+    },
+    "160": {
+        "id": 160,
+        "name": "Feraligatr",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
+        "quantidade": 0
+    },
+    "252": {
+        "id": 252,
+        "name": "Treecko",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png",
+        "quantidade": 0
+    },
+    "253": {
+        "id": 253,
+        "name": "Grovyle",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/253.png",
+        "quantidade": 0
+    },
+    "254": {
+        "id": 254,
+        "name": "Sceptile",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+        "quantidade": 0
+    },
+    "255": {
+        "id": 255,
+        "name": "Torchic",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png",
+        "quantidade": 0
+    },
+    "256": {
+        "id": 256,
+        "name": "Combusken",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/256.png",
+        "quantidade": 0
+    },
+    "257": {
+        "id": 257,
+        "name": "Blaziken",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png",
+        "quantidade": 0
+    },
+    "258": {
+        "id": 258,
+        "name": "Mudkip",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png",
+        "quantidade": 0
+    },
+    "259": {
+        "id": 259,
+        "name": "Marshtomp",
+        "types": [
+            "water",
+            "ground"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/259.png",
+        "quantidade": 0
+    },
+    "260": {
+        "id": 260,
+        "name": "Swampert",
+        "types": [
+            "water",
+            "ground"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
+        "quantidade": 0
+    },
+    "387": {
+        "id": 387,
+        "name": "Turtwig",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png",
+        "quantidade": 0
+    },
+    "390": {
+        "id": 390,
+        "name": "Chimchar",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/390.png",
+        "quantidade": 0
+    },
+    "393": {
+        "id": 393,
+        "name": "Piplup",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png",
+        "quantidade": 0
+    },
+    "388": {
+        "id": 388,
+        "name": "Grotle",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/388.png",
+        "quantidade": 0
+    },
+    "389": {
+        "id": 389,
+        "name": "Torterra",
+        "types": [
+            "grass",
+            "ground"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png",
+        "quantidade": 0
+    },
+    "391": {
+        "id": 391,
+        "name": "Monferno",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/391.png",
+        "quantidade": 0
+    },
+    "392": {
+        "id": 392,
+        "name": "Infernape",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png",
+        "quantidade": 0
+    },
+    "394": {
+        "id": 394,
+        "name": "Prinplup",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/394.png",
+        "quantidade": 0
+    },
+    "395": {
+        "id": 395,
+        "name": "Empoleon",
+        "types": [
+            "water",
+            "steel"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png",
+        "quantidade": 0
+    },
+    "495": {
+        "id": 495,
+        "name": "Snivy",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png",
+        "quantidade": 0
+    },
+    "498": {
+        "id": 498,
+        "name": "Tepig",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/498.png",
+        "quantidade": 0
+    },
+    "501": {
+        "id": 501,
+        "name": "Oshawott",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/501.png",
+        "quantidade": 0
+    },
+    "650": {
+        "id": 650,
+        "name": "Chespin",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/650.png",
+        "quantidade": 0
+    },
+    "653": {
+        "id": 653,
+        "name": "Fennekin",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/653.png",
+        "quantidade": 0
+    },
+    "656": {
+        "id": 656,
+        "name": "Froakie",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/656.png",
+        "quantidade": 0
+    },
+    "651": {
+        "id": 651,
+        "name": "Quilladin",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/651.png",
+        "quantidade": 0
+    },
+    "652": {
+        "id": 652,
+        "name": "Chesnaught",
+        "types": [
+            "grass",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png",
+        "quantidade": 0
+    },
+    "654": {
+        "id": 654,
+        "name": "Braixen",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/654.png",
+        "quantidade": 0
+    },
+    "655": {
+        "id": 655,
+        "name": "Delphox",
+        "types": [
+            "fire",
+            "psychic"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png",
+        "quantidade": 0
+    },
+    "657": {
+        "id": 657,
+        "name": "Frogadier",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/657.png",
+        "quantidade": 0
+    },
+    "658": {
+        "id": 658,
+        "name": "Greninja",
+        "types": [
+            "water",
+            "dark"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png",
+        "quantidade": 0
+    },
+    "496": {
+        "id": 496,
+        "name": "Servine",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png",
+        "quantidade": 0
+    },
+    "497": {
+        "id": 497,
+        "name": "Serperior",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png",
+        "quantidade": 0
+    },
+    "499": {
+        "id": 499,
+        "name": "Pignite",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/499.png",
+        "quantidade": 0
+    },
+    "500": {
+        "id": 500,
+        "name": "Emboar",
+        "types": [
+            "fire",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
+        "quantidade": 0
+    },
+    "502": {
+        "id": 502,
+        "name": "Dewott",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png",
+        "quantidade": 0
+    },
+    "503": {
+        "id": 503,
+        "name": "Samurott",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png",
+        "quantidade": 0
+    },
+    "722": {
+        "id": 722,
+        "name": "Rowlet",
+        "types": [
+            "grass",
             "flying"
         ],
-        "quantidade": 6
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/722.png",
+        "quantidade": 0
     },
-    "17": {
-        "id": 17,
-        "name": "Pidgeotto",
+    "725": {
+        "id": 725,
+        "name": "Litten",
         "types": [
-            "normal",
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/725.png",
+        "quantidade": 0
+    },
+    "728": {
+        "id": 728,
+        "name": "Popplio",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/728.png",
+        "quantidade": 0
+    },
+    "723": {
+        "id": 723,
+        "name": "Dartrix",
+        "types": [
+            "grass",
             "flying"
         ],
-        "quantidade": 1
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/723.png",
+        "quantidade": 0
     },
-    "19": {
-        "id": 19,
-        "name": "Rattata",
+    "724": {
+        "id": 724,
+        "name": "Decidueye",
+        "types": [
+            "grass",
+            "ghost"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/724.png",
+        "quantidade": 0
+    },
+    "726": {
+        "id": 726,
+        "name": "Torracat",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/726.png",
+        "quantidade": 0
+    },
+    "727": {
+        "id": 727,
+        "name": "Incineroar",
+        "types": [
+            "fire",
+            "dark"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/727.png",
+        "quantidade": 0
+    },
+    "729": {
+        "id": 729,
+        "name": "Brionne",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/729.png",
+        "quantidade": 0
+    },
+    "730": {
+        "id": 730,
+        "name": "Primarina",
+        "types": [
+            "water",
+            "fairy"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/730.png",
+        "quantidade": 0
+    },
+    "810": {
+        "id": 810,
+        "name": "Grookey",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/810.png",
+        "quantidade": 0
+    },
+    "813": {
+        "id": 813,
+        "name": "Scorbunny",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/813.png",
+        "quantidade": 0
+    },
+    "816": {
+        "id": 816,
+        "name": "Sobble",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/816.png",
+        "quantidade": 0
+    },
+    "811": {
+        "id": 811,
+        "name": "Thwackey",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/811.png",
+        "quantidade": 0
+    },
+    "812": {
+        "id": 812,
+        "name": "Rillaboom",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/812.png",
+        "quantidade": 0
+    },
+    "814": {
+        "id": 814,
+        "name": "Raboot",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/814.png",
+        "quantidade": 0
+    },
+    "815": {
+        "id": 815,
+        "name": "Cinderace",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/815.png",
+        "quantidade": 0
+    },
+    "817": {
+        "id": 817,
+        "name": "Drizzile",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/817.png",
+        "quantidade": 0
+    },
+    "818": {
+        "id": 818,
+        "name": "Inteleon",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/818.png",
+        "quantidade": 0
+    },
+    "906": {
+        "id": 906,
+        "name": "Sprigatito",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png",
+        "quantidade": 0
+    },
+    "909": {
+        "id": 909,
+        "name": "Fuecoco",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/909.png",
+        "quantidade": 0
+    },
+    "912": {
+        "id": 912,
+        "name": "Quaxly",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/912.png",
+        "quantidade": 0
+    },
+    "907": {
+        "id": 907,
+        "name": "Floragato",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/907.png",
+        "quantidade": 0
+    },
+    "908": {
+        "id": 908,
+        "name": "Meowscarada",
+        "types": [
+            "grass",
+            "dark"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/908.png",
+        "quantidade": 0
+    },
+    "911": {
+        "id": 911,
+        "name": "Skeledirge",
+        "types": [
+            "fire",
+            "ghost"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/911.png",
+        "quantidade": 0
+    },
+    "910": {
+        "id": 910,
+        "name": "Crocalor",
+        "types": [
+            "fire"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/910.png",
+        "quantidade": 0
+    },
+    "913": {
+        "id": 913,
+        "name": "Quaxwell",
+        "types": [
+            "water"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/913.png",
+        "quantidade": 0
+    },
+    "914": {
+        "id": 914,
+        "name": "Quaquaval",
+        "types": [
+            "water",
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/914.png",
+        "quantidade": 0
+    },
+    "447": {
+        "id": 447,
+        "name": "Riolu",
+        "types": [
+            "fighting"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/447.png",
+        "quantidade": 0
+    },
+    "448": {
+        "id": 448,
+        "name": "Lucario",
+        "types": [
+            "fighting",
+            "steel"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
+        "quantidade": 0
+    },
+    "133": {
+        "id": 133,
+        "name": "Eevee",
         "types": [
             "normal"
         ],
-        "quantidade": 5
-    },
-    "20": {
-        "id": 20,
-        "name": "Raticate",
-        "types": [
-            "normal"
-        ],
-        "quantidade": 1
-    },
-    "21": {
-        "id": 21,
-        "name": "Spearow",
-        "types": [
-            "normal",
-            "flying"
-        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
         "quantidade": 0
     },
-    "23": {
-        "id": 23,
-        "name": "Ekans",
+    "134": {
+        "id": 134,
+        "name": "Vaporeon",
         "types": [
-            "poison"
+            "water"
         ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
         "quantidade": 0
     },
-    "25": {
-        "id": 25,
-        "name": "Pikachu",
+    "135": {
+        "id": 135,
+        "name": "Jolteon",
         "types": [
             "electric"
         ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
         "quantidade": 0
     },
-    "26": {
-        "id": 26,
-        "name": "Raichu",
+    "136": {
+        "id": 136,
+        "name": "Flareon",
         "types": [
-            "electric"
+            "fire"
         ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+        "quantidade": 0
+    },
+    "196": {
+        "id": 196,
+        "name": "Espeon",
+        "types": [
+            "psychic"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
+        "quantidade": 0
+    },
+    "197": {
+        "id": 197,
+        "name": "Umbreon",
+        "types": [
+            "dark"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
+        "quantidade": 0
+    },
+    "470": {
+        "id": 470,
+        "name": "Leafeon",
+        "types": [
+            "grass"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
+        "quantidade": 0
+    },
+    "471": {
+        "id": 471,
+        "name": "Glaceon",
+        "types": [
+            "ice"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
+        "quantidade": 0
+    },
+    "700": {
+        "id": 700,
+        "name": "Sylveon",
+        "types": [
+            "fairy"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png",
+        "quantidade": 0
+    },
+    "246": {
+        "id": 246,
+        "name": "Larvitar",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
+        "quantidade": 0
+    },
+    "247": {
+        "id": 247,
+        "name": "Pupitar",
+        "types": [
+            "rock",
+            "ground"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png",
+        "quantidade": 0
+    },
+    "248": {
+        "id": 248,
+        "name": "Tyranitar",
+        "types": [
+            "rock",
+            "dark"
+        ],
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
         "quantidade": 0
     }
 }

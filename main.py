@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+from PIL import Image, ImageTk
 import requests
 import json
 import os
@@ -20,15 +21,24 @@ def save_data(data):
 # Função para buscar Pokémon na PokeAPI
 def fetch_pokemon(identifier):
     try:
-        url = f"https://pokeapi.co/api/v2/pokemon/{identifier}"
+        if isinstance(identifier, int) or identifier.isdigit():
+            url = f"https://pokeapi.co/api/v2/pokemon/{identifier}"
+        else:
+            identifier = identifier.lower()
+            url = f"https://pokeapi.co/api/v2/pokemon/{identifier}"
+
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
+
         types = [t['type']['name'] for t in data['types']]
+        sprite_url = data['sprites']['front_default']
+
         return {
             "id": data['id'],
             "name": data['name'].capitalize(),
             "types": types,
+            "sprite": sprite_url,
             "quantidade": 0
         }
     except requests.RequestException:
@@ -43,7 +53,7 @@ def add_pokemon():
         return
 
     if identifier.isdigit():
-        identifier = int(identifier)  # Converte para número se for ID
+        identifier = int(identifier)
 
     if str(identifier).lower() in data or str(identifier) in data:
         messagebox.showinfo("Aviso", f"O Pokémon já está na coleção.")
@@ -74,13 +84,52 @@ def update_quantity():
     except ValueError:
         messagebox.showerror("Erro", "Por favor, insira um número válido para a quantidade.")
 
-# Atualizar tabela
+# Atualizar tabela com ordenação
 def update_table():
+    # Limpa a tabela
     for row in table.get_children():
         table.delete(row)
 
-    for pokemon_id, details in data.items():
-        table.insert("", "end", values=(pokemon_id, details['name'], ', '.join(details['types']), details['quantidade']))
+    # Ordena os Pokémon pelo ID
+    sorted_data = sorted(data.items(), key=lambda item: int(item[0]))
+
+    # Preenche a tabela com os dados ordenados
+    for pokemon_id, details in sorted_data:
+        table.insert("", "end", values=(
+            pokemon_id,
+            details['name'],
+            ', '.join(details['types']),
+            details['quantidade']
+        ))
+
+# Exibir sprite do Pokémon selecionado
+def show_sprite(event):
+    selected_item = table.selection()
+    if not selected_item:
+        sprite_label.configure(image=None)
+        sprite_label.image = None
+        return
+
+    pokemon_id = table.item(selected_item, "values")[0]
+    sprite_url = data[pokemon_id]['sprite']
+
+    # Baixar e redimensionar a imagem
+    try:
+        response = requests.get(sprite_url, stream=True)
+        response.raise_for_status()
+
+        image_data = response.raw
+        image = Image.open(image_data)
+        image = image.resize((100, 100), Image.Resampling.LANCZOS)
+
+        sprite_image = ImageTk.PhotoImage(image)
+
+        # Atualizar o Label do sprite
+        sprite_label.configure(image=sprite_image)
+        sprite_label.image = sprite_image  # Salvar referência para evitar garbage collection
+
+    except requests.RequestException:
+        messagebox.showerror("Erro", "Falha ao carregar o sprite do Pokémon.")
 
 # Criar janela principal
 data = load_data()
@@ -115,11 +164,24 @@ frame_table.pack(fill="both", expand=True, padx=10, pady=5)
 
 columns = ("ID", "Nome", "Tipos", "Quantidade")
 table = ttk.Treeview(frame_table, columns=columns, show="headings", height=15)
-table.pack(fill="both", expand=True)
+table.pack(side="left", fill="both", expand=True)
 
+# Ajustar as colunas
+table.column("ID", width=50, anchor="center")
+table.column("Nome", width=150, anchor="center")
+table.column("Tipos", width=200, anchor="center")
+table.column("Quantidade", width=100, anchor="center")
+
+# Configurar os cabeçalhos
 for col in columns:
     table.heading(col, text=col)
-    table.column(col, anchor="center")
+
+# Exibição de sprite
+sprite_label = ttk.Label(frame_table)
+sprite_label.pack(side="right", padx=10, pady=10)
+
+# Eventos
+table.bind("<<TreeviewSelect>>", show_sprite)
 
 update_table()
 
