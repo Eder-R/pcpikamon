@@ -1,25 +1,49 @@
+''' Pokedex em python '''
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk
-import requests
 import json
 import os
+import requests
+from PIL import Image, ImageTk
 
-DATA_FILE = 'pokemon_collection.json'
+DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pokemon_collection.json')
 
 # Funções para manipular os dados locais
 def load_data():
+    """
+    Carrega os dados da coleção de Pokémon a partir de um arquivo JSON.
+
+    Se o arquivo não existir, retorna um dicionário vazio.
+
+    Returns:
+        dict: Dados da coleção de Pokémon.
+    """
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r') as file:
+        with open(DATA_FILE, 'r', encoding='utf-8') as file:
             return json.load(file)
     return {}
 
 def save_data(data):
-    with open(DATA_FILE, 'w') as file:
+    """
+    Salva os dados da coleção de Pokémon em um arquivo JSON.
+
+    Args:
+        data (dict): Dados da coleção de Pokémon a serem salvos.
+    """
+    with open(DATA_FILE, 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4)
 
 # Função para buscar Pokémon na PokeAPI
 def fetch_pokemon(identifier):
+    """
+    Busca informações de um Pokémon na PokeAPI com base no identificador fornecido.
+
+    Args:
+        identifier (str | int): ID ou nome do Pokémon.
+
+    Returns:
+        dict | None: Dados do Pokémon ou None se houver um erro na requisição.
+    """
     try:
         if isinstance(identifier, int) or identifier.isdigit():
             url = f"https://pokeapi.co/api/v2/pokemon/{identifier}"
@@ -27,7 +51,7 @@ def fetch_pokemon(identifier):
             identifier = identifier.lower()
             url = f"https://pokeapi.co/api/v2/pokemon/{identifier}"
 
-        response = requests.get(url)
+        response = requests.get(url, timeout=5)
         response.raise_for_status()
         data = response.json()
 
@@ -47,6 +71,13 @@ def fetch_pokemon(identifier):
 
 # Adicionar Pokémon
 def add_pokemon():
+    """
+    Adiciona um Pokémon à coleção com base no ID ou nome fornecido pelo usuário.
+
+    Verifica se o Pokémon já está na coleção antes de adicionar.
+    Se o Pokémon for adicionado com sucesso, a tabela é atualizada,
+    e uma mensagem de sucesso é exibida.
+    """
     identifier = entry_pokemon_id.get().strip()
     if not identifier:
         messagebox.showerror("Erro", "Por favor, insira um ID ou nome válido.")
@@ -55,19 +86,27 @@ def add_pokemon():
     if identifier.isdigit():
         identifier = int(identifier)
 
-    if str(identifier).lower() in data or str(identifier) in data:
-        messagebox.showinfo("Aviso", f"O Pokémon já está na coleção.")
+    if str(identifier).lower() in pokemon_data or str(identifier) in pokemon_data:
+        messagebox.showinfo("Aviso", "O Pokémon já está na coleção.")
         return
 
     pokemon = fetch_pokemon(identifier)
     if pokemon:
-        data[str(pokemon['id'])] = pokemon
-        save_data(data)
+        pokemon_data[str(pokemon['id'])] = pokemon
+        save_data(pokemon_data)
         update_table()
         messagebox.showinfo("Sucesso", f"{pokemon['name']} adicionado à coleção!")
 
 # Atualizar quantidade de Pokémon
 def update_quantity():
+    """
+    Atualiza a quantidade de um Pokémon na coleção com base,
+    na seleção da tabela e valor inserido pelo usuário.
+
+    A quantidade é ajustada para um valor não negativo.
+    Se a operação for bem-sucedida, a tabela é atualizada e,
+    uma mensagem de sucesso é exibida.
+    """
     selected_item = table.selection()
     if not selected_item:
         messagebox.showerror("Erro", "Por favor, selecione um Pokémon na tabela.")
@@ -76,22 +115,29 @@ def update_quantity():
     pokemon_id = table.item(selected_item, "values")[0]
     try:
         quantity_change = int(entry_quantity.get().strip())
-        new_quantity = max(0, data[pokemon_id]['quantidade'] + quantity_change)
-        data[pokemon_id]['quantidade'] = new_quantity
-        save_data(data)
+        new_quantity = max(0, pokemon_data[pokemon_id]['quantidade'] + quantity_change)
+        pokemon_data[pokemon_id]['quantidade'] = new_quantity
+        save_data(pokemon_data)
         update_table()
-        messagebox.showinfo("Sucesso", f"A quantidade de {data[pokemon_id]['name']} foi atualizada para {new_quantity}.")
+        messagebox.showinfo("Sucesso",
+                            f"A quantidade de {pokemon_data[pokemon_id]['name']}" 
+                            "foi atualizada para {new_quantity}.")
     except ValueError:
         messagebox.showerror("Erro", "Por favor, insira um número válido para a quantidade.")
 
 # Atualizar tabela com ordenação
 def update_table():
+    """
+    Atualiza a tabela de Pokémon na interface gráfica.
+
+    Ordena os Pokémon por ID e preenche a tabela com as informações da coleção.
+    """
     # Limpa a tabela
     for row in table.get_children():
         table.delete(row)
 
     # Ordena os Pokémon pelo ID
-    sorted_data = sorted(data.items(), key=lambda item: int(item[0]))
+    sorted_data = sorted(pokemon_data.items(), key=lambda item: int(item[0]))
 
     # Preenche a tabela com os dados ordenados
     for pokemon_id, details in sorted_data:
@@ -104,6 +150,12 @@ def update_table():
 
 # Exibir sprite do Pokémon selecionado
 def show_sprite(event):
+    """
+    Exibe o sprite do Pokémon selecionado na tabela.
+
+    Baixa a imagem do sprite a partir da URL e redimensiona a imagem para exibição.
+    Se houver algum erro ao carregar a imagem, uma mensagem de erro será exibida.
+    """
     selected_item = table.selection()
     if not selected_item:
         sprite_label.configure(image=None)
@@ -111,11 +163,11 @@ def show_sprite(event):
         return
 
     pokemon_id = table.item(selected_item, "values")[0]
-    sprite_url = data[pokemon_id]['sprite']
+    sprite_url = pokemon_data[pokemon_id]['sprite']
 
     # Baixar e redimensionar a imagem
     try:
-        response = requests.get(sprite_url, stream=True)
+        response = requests.get(sprite_url, stream=True, timeout=5)
         response.raise_for_status()
 
         image_data = response.raw
@@ -132,7 +184,7 @@ def show_sprite(event):
         messagebox.showerror("Erro", "Falha ao carregar o sprite do Pokémon.")
 
 # Criar janela principal
-data = load_data()
+pokemon_data = load_data()
 root = tk.Tk()
 root.title("Pokédex Pokémon GO")
 
